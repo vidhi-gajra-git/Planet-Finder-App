@@ -1,0 +1,203 @@
+body {
+  position: absolute;
+  background-color: transparent;
+  color: white;
+  font-family: "Fredericka the Great", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: none;
+  overflow-x: hidden;
+  line-height: 1.6;
+  
+}
+
+.flex-box {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  background-color: transparent;
+  padding: 10px 20px;
+  z-index: 3;
+}
+
+.flex-box > div {
+  display: flex;
+  align-items: center;
+}
+
+.flex-box > div > span {
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+.flex-box > div > span:hover {
+  color: orange;
+}
+
+#fake_button {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: solid rgba(255, 255, 255, 0.269) 1px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#fake_button:hover {
+  background-color: orange;
+}
+
+#Moon {
+  display: none;
+}
+
+#fairytale {
+  opacity: 0.7;
+  max-width: 100%;
+}
+
+#Main_text {
+  opacity: 0.9;
+  font-size: 2em;
+  transition: transform 0.3s;
+}
+
+#Logo {
+  font-size: 2em;
+  position: relative;
+  transition: color 0.3s;
+  animation: move 2s ;
+}
+
+#Logo > svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  margin-right: 5px;
+}
+
+#Logo:hover {
+  color: orange;
+}
+
+#Logo:hover {
+  color: orange;
+}
+
+@keyframes move {
+  from {
+      opacity: 0.1;
+      transform: translate(400%, 500%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+      transform: translate(-10%, 0);
+  }
+  to {
+      transform: translate(10%, 0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+      transform: translateX(50%);
+  }
+  to {
+      transform: translateX(20%);
+  }
+}
+
+@keyframes shake {
+  /* ... animation frames ... */
+}
+
+  
+  .Call:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: 1;
+  }
+  svg:hover ,path:hover{
+    fill:orange;
+    width: 30px;
+    height:30px;
+  }
+  #rotation{
+    position: absolute ;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 200;
+    padding: 10px 20px;
+    border: solid rgba(255, 255, 255, 0.269) 1px;
+    border-radius: 50px;
+    background-color: black;
+    z-index: 3;
+    bottom:0;
+    margin-bottom: 20px;
+   
+    /* color: white; */
+   
+  
+  }
+  #time{
+    position:fixed ;
+    margin:20px;
+    background-color:transparent;
+    color:  aliceblue;
+    z-index: 3;
+    top:0;
+  }
+  @media screen and (max-width: 768px) {
+    .flex-box {
+      /* transform: translateX(2%); */
+       /* background-color: rgba(0, 0, 0, 0.742); */
+        flex-direction: column;
+        justify-content: flex-end; /* Align contents to the top */
+        align-items: flex-end; 
+        padding: 20px;
+        
+        /* width:300px; */
+        /* color: rgba(240, 255, 255, 0.728);  */
+        
+    }
+
+    .flex-box > div {
+        margin: 15px 0;
+    }
+
+    #fake_button {
+        width: 100%;
+      
+       
+    }
+    .label{
+      color: white;
+      background-color: blanchedalmond;
+    }
+
+    #Main_text {
+        font-size: 1.5em;
+    }
+    #rotation{
+      font-size: 3px;
+    }
+}
