@@ -1,6 +1,4 @@
-# from django.shortcuts import render
 from django.shortcuts import render
-# from django.templatetags.static import static
 import requests
 from django.http import JsonResponse
 from rest_framework import generics

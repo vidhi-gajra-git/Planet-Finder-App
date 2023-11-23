@@ -1,1 +1,0 @@
-  # current_time_new = current_time.utc_datetime() + timedelta(seconds=timezone_offset_seconds)
