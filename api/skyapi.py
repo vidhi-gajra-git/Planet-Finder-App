@@ -72,7 +72,6 @@ def  skyCoordinates():
     timezone_offset_hours = float(longitude) / 15.0
     ts_with_offset = current_time + timezone_offset_hours -12
     print(ts_with_offset.utc_datetime())
-    # time_value = current_time.utc_jpl()
     earth, celestial_object = eph['earth'], eph['moon'] 
     observer = Topos(latitude_degrees=observer_latitude, longitude_degrees=observer_longitude, elevation_m=observer_elevation)
     celestial_object_apparent = (earth + observer).at(ts_with_offset).observe(celestial_object).apparent()
